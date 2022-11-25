@@ -9,7 +9,7 @@ import { LoggerMiddleware } from './nmd_core/common/middlewares/logger.middlewar
 import { UserAgentModule } from './auth_modules/model/userAgent/userAgent.module';
 import { join } from 'path';
 import { DatabaseModule } from './nmd_core/database';
-import { AMModule } from './am_modules/am.module';
+import { AMModule } from './chanhxe_modules/am.module';
 
 @Module({
   imports: [

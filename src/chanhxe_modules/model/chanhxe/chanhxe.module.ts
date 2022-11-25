@@ -1,21 +1,21 @@
 import { Module } from '@nestjs/common';
-import { ProductRepo } from '../../repo';
-import { ProductService } from '../../service/product.service';
+import { ChanhXeRepo } from '../../repo';
+import { ChanhXeService } from '../../service/chanhxe.service';
 import { AuthMiddleware } from '../../../nmd_core/common/middlewares/bearer.middleware';
-import { ProductController } from '../../controller/product/product.controller';
+import { ChanhXeController } from '../../controller/chanhxe.controller';
 import { ResponseService } from '../../../nmd_core/shared/response.service';
 import { UserRepo } from '../../../auth_modules/repo';
 
 @Module({
   imports: [],
-  controllers: [ProductController],
+  controllers: [ChanhXeController],
   providers: [
-    ProductRepo,
-    ProductService,
+    ChanhXeRepo,
+    ChanhXeService,
     AuthMiddleware,
     UserRepo,
     ResponseService,
   ],
   exports: [],
 })
-export class ProductModule {}
+export class ChanhXeModule {}
