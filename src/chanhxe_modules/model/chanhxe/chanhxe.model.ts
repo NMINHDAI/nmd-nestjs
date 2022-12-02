@@ -4,16 +4,16 @@ export class ChanhXeModel {
   tenChanh: string;
   baiNhan: string;
   baiVe: string;
-  sdt: string;
+  sdt: string[];
   gioHoatDong: string;
   diaBan: string;
 }
 
 const ChanhXeSchema = new Schema({
-  name: { type: String, default: '' },
+  tenChanh: { type: String, default: '' },
   baiNhan: { type: String, default: '' },
   baiVe: { type: String, default: '' },
-  sdt: { type: String, default: '' },
+  sdt: [{ type: String, default: '' }],
   gioHoatDong: { type: String, default: '' },
   diaBan: { type: String, default: '' },
 });

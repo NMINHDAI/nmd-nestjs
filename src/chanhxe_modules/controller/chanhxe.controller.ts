@@ -66,4 +66,21 @@ export class ChanhXeController {
       else throw ReturnInternalServerError(error);
     }
   }
+
+  @Get('/getOne')
+  async getChanhxeById(@Req() req: Request, @Query() query) {
+    // await this.authMiddleWare.validateBearer(req);
+
+    try {
+      const res = await this.chanhxeService.getById(query.id);
+      return {
+        statusCode: 200,
+        message: 'Get chanhxe info successfully',
+        data: res,
+      };
+    } catch (error) {
+      if (error.status) throw error;
+      else throw ReturnInternalServerError(error);
+    }
+  }
 }
